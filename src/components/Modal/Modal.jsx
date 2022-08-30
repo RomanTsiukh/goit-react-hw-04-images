@@ -1,3 +1,4 @@
+// Працюючий код
 import { Component } from 'react';
 import { createPortal } from 'react-dom';
 import { Overlay, ModalBox } from './Modal.styled';
