@@ -16,7 +16,7 @@ export function App(props) {
   const [status, setStatus] = useState(props.idle);
 
   useEffect(() => {
-    (async function fetchTestData(_, prevState) {
+    async function fetchTestData(_, prevState) {
       try {
         const prevPage = prevState.page;
         const currentPage = page;
@@ -42,7 +42,9 @@ export function App(props) {
         console.log(error);
         setStatus(props.rejected);
       }
-    });
+    }
+
+    fetchTestData();
   }, []);
 
   const formSubmit = query => {
